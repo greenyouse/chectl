@@ -318,7 +318,7 @@ export default class Generate extends Command {
     k8sIngressesList.items.forEach(async item => {
       let ingress = new V1beta1Ingress()
       ingress.kind = 'Ingress'
-      ingress.apiVersion = 'extensions/v1beta1'
+      ingress.apiVersion = 'apps/v1'
       ingress.metadata = new V1ObjectMeta()
       ingress.metadata.labels = { ...item.metadata!.labels }
       ingress.metadata.name = item.metadata!.name
